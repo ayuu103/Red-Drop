@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.navbar {
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-weight: 500;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    top: 0%;
+    text-decoration: none;
+    color: black;
+    box-shadow: 1px 1px 8px rgb(183, 96, 96);
+}
+
+.nav-ul {
+    padding-left: 600px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.navbar ul a {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+.nav-img a {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 25px;
+    transition: all 0.3s ease;
+}
+
+nav .menu-btn i {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width:1450px) and (min-width: 1000px) {
+    .nav-ul {
+        padding-left: 200px;
+    }
+}
+
+@media screen and (max-width:1450px) and (min-width: 920px) {
+    .nav-ul {
+        padding-left: 0px;
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 10px 0 10px;
+    }
+}
+
+@media (max-width: 920px) {
+
+    .nav-ul {
+        padding-left: 0px;
+    }
+
+    nav .menu-btn i {
+        display: block;
+    }
+
+    #click:checked~.menu-btn i::before {
+        content: "\f01b";
+    }
+
+    nav ul {
+        position: fixed;
+        top: 90px;
+        left: -100%;
+        background-color: #fcb8b8;
+        height: 20vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: auto 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.1s linear;
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        text-decoration: underline red;
+    }
+}
+
+
+@media screen and (max-width: 2050px) and (min-width: 200px) {
+    .sec1 {
+        display: none;
+    }
+}
+
+.sec1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+label,
+input,
+select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffcfcf;
+}
+
+.donor-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+@media screen and (max-width:850px) and (min-width: 300px) {
+    table {
+        max-width: auto;
+    }
+}
+
+
+
+
+
+
+.sec-data {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+body {
+    background-color: #ffcfcf;
+}
+
+/* table{
+    width: 100%;
+    table-layout: auto;
+}
+
+table,
+th,
+td {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+}
+
+
+.table-r1 {
+    color: red;
+    font-size: 30px;
+
+    font-weight: 300;
+}
+
+.table-r1 th {
+    padding: 20px;
+} */
+
+
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid rgb(0, 0, 0);
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 18px;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid black;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+
+.color-green {
+    color: green;
+    font-size: 18px;
+}
+
+.color-blue {
+    color: blue;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+.B1 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.B1 header {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+@media screen and (max-width:370px) and (min-width: 200px) {
+    .container {
+        justify-content: space-evenly;
+        gap: 40px;
+
+    }
+}
+
+@media screen and (max-width:720px) and (min-width: 370px) {
+    .container {
+        justify-content: space-evenly;
+        gap: 80px;
+
+    }
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.bio {
+    margin-top: 20px;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: #fff;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 20px;
+}
